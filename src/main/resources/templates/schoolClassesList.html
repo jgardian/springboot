@@ -18,15 +18,19 @@
 				<td><span th:text="${schoolClass.currentYear}" /></td>
 				<td><span th:text="${schoolClass.profile}" /></td>
 		        <td>
+					<form action="ModifySchoolClass" method="POST">
+          				<input type="hidden" name="schoolClassId" th:value="${schoolClass.id}"/>
+          				<button type="submit">Modyfikuj</button>
+        			</form>
 		            <form action="DeleteSchoolClass" method="POST">
 		            	<input type="hidden" name="schoolClassId" th:value="${schoolClass.id}" />
-		                <button type="submit">X</button>
+		                <button type="submit">Usuń</button>
 		            </form>
 		        </td>
 			</tr>
 		
 		
-		</table><br/><a href='AddSchoolClass'>dodaj klasę</a><br/><br/>
+		</table><br/><a href='AddSchoolClass'>Dodaj nowa klasę</a><br/><br/>
 		
     </div>
 
